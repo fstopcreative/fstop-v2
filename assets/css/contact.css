@@ -1,0 +1,388 @@
+/*------------------------------------------------------------------------------
+  IntlTelInput
+------------------------------------------------------------------------------*/
+.iti {
+  --iti-path-flags-1x: url('../images/flags.webp');
+  --iti-path-flags-2x: url('../images/flags@2x.webp');
+  --iti-path-globe-1x: url('../images/globe.webp');
+  --iti-path-globe-2x: url('../images/globe@2x.webp');
+  --iti-dropdown-bg: black;
+  --iti-border-color: black;
+  --iti-dialcode-color: #999999;
+  --iti-arrow-color: #aaaaaa;
+  --iti-hover-color: rgba(255, 255, 255, 0.05);
+}
+
+.iti--inline-dropdown .iti__dropdown-content {
+  border-radius: 0 0 10px 10px;
+}
+
+.iti__country-name {
+  font-size: 0.875rem;
+  color: white;
+}
+
+.iti__dial-code {
+  font-size: 0.875rem;
+}
+
+.iti__search-input {
+  margin-bottom: 0.5rem;
+  background: transparent;
+  border: none;
+  padding: 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  font-family: "Recoleta", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1;
+  color: white;
+  outline: none;
+  border: none;
+  appearance: none;
+}
+
+.iti__search-input:focus {
+  outline: none;
+}
+
+.contact {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+}
+
+.contact .container {
+  position: relative;
+}
+
+.contact__gradient {
+  /* display: none; */
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 60%;
+  border-radius: 9999px;
+  background: linear-gradient(180deg, rgba(0, 233, 228, 0.1) 0%, rgba(160, 79, 244, 0.2) 100%);
+  filter: blur(100px);
+}
+
+@media (max-width: 1023px) {
+  .contact__gradient {
+    display: none;
+  }
+}
+
+.contact__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+
+.contact__content {
+  display: flex;
+  flex-direction: column;
+  grid-column: span 5 / span 5;
+
+  @media screen and (min-width: 1024px) {
+    grid-column: span 7 / span 7;
+  }
+}
+
+.contact__subtitle {
+  margin-bottom: 2rem;
+  font-family: "Recoleta", sans-serif;
+  font-size: clamp(18px, 2vw, 32px);
+  line-height: 1;
+  color: white;
+}
+
+.contact__title {
+  margin-bottom: 1.5rem;
+  font-size: clamp(34px, 5vw, 60px);
+  line-height: 1.15;
+  color: white;
+}
+
+.contact__description {
+  margin-bottom: 1.5rem;
+  font-size: clamp(18px, 2vw, 24px);
+  line-height: 1.5;
+  color: white;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 3rem;
+  }
+}
+
+.contact__methods {
+  font-size: clamp(15px, 2vw, 18px);
+  line-height: 1.5;
+  color: white;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact__methods li::before {
+  content: "";
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 0.75rem;
+}
+
+.contact__methods li a {
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact__methods li a:hover {
+  opacity: 0.6;
+}
+
+.contact__form {
+  grid-column: span 7 / span 7;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 20px;
+
+  @media screen and (min-width: 768px) {
+    padding: 2.5rem;
+  }
+
+  @media screen and (min-width: 1024px) {
+    grid-column: span 5 / span 5;
+  }
+}
+
+.contact__form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contact__label {
+  display: block;
+  font-size: 1rem;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+
+  @media screen and (min-width: 768px) {
+    font-size: 1.25rem;
+  }
+}
+
+.contact__input {
+  width: 100%;
+  padding: 0.75rem 0;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  font-family: "Recoleta", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.contact__input:focus {
+  outline: none;
+  border-bottom-color: white;
+}
+
+.contact__input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+.contact__input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+.contact__input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+.contact__input:-moz-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.contact__input.placeholder-active {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+textarea.contact__input {
+  min-height: 90px;
+  padding: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  resize: none;
+}
+
+textarea.contact__input:focus {
+  border-color: white;
+}
+
+.contact__form-group-radio-group {
+  display: flex;
+  margin-top: 0.625rem;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.contact__form-group-radio input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.contact__form-group-radio label {
+  position: relative;
+  padding-left: 36px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: white;
+}
+
+.contact__form-group-radio label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 9999px;
+  background-color: transparent;
+  border: 1px solid white;
+}
+
+.contact__form-group-radio label::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 9999px;
+  background-color: white;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.contact__form-group-radio input:checked + label::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.contact__submit {
+  align-self: flex-end;
+}
+
+/*------------------------------------------------------------------------------
+  Our offices
+------------------------------------------------------------------------------*/
+.our-offices {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+  @media screen and (min-width: 1024px) {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+}
+
+.our-offices__title {
+  margin-bottom: 2rem;
+  font-size: clamp(34px, 5vw, 60px);
+  font-weight: 400;
+  line-height: 1.15;
+  color: white;
+}
+
+.our-offices__list {
+  font-size: clamp(15px, 2vw, 24px);
+  line-height: 1.5;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+
+  @media screen and (min-width: 768px) {
+    margin: 0 0 4rem;
+  }
+}
+
+.our-offices__list li {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.our-offices__list li::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: block;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.our-offices__map {
+  width: 100%;
+  display: block;
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: 20px;
+  overflow: hidden;
+
+  @media screen and (min-width: 768px) {
+    border-radius: 30px;
+    aspect-ratio: 160 / 73;
+  }
+
+  @media screen and (min-width: 1024px) {
+    border-radius: 50px;
+  }
+}
+
+.our-offices__map #map {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
