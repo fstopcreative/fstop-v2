@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Recoleta';
+  src: url('../fonts/Recoleta-Regular.otf') format('opentype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -172,7 +180,7 @@ table {
   Global
 ------------------------------------------------------------------------------*/
 body {
-  font-family: "Neue Montreal", sans-serif;
+  font-family: "Neue Montreal", -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   background-color: black;
   -webkit-font-smoothing: antialiased;
@@ -537,7 +545,7 @@ button {
 .mobile-navigation__link {
   position: relative;
   padding: 0;
-  font-family: "Neue Montreal", sans-serif;
+  font-family: "Neue Montreal", -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, "Helvetica Neue", Arial, sans-serif;
   font-size: 2.215rem;
   line-height: 1.5;
   color: white;
@@ -769,7 +777,7 @@ button {
 .new-mobile-navigation__link {
   position: relative;
   padding: 0;
-  font-family: "Neue Montreal", sans-serif;
+  font-family: "Neue Montreal", -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, "Helvetica Neue", Arial, sans-serif;
   font-size: 2.215rem;
   line-height: 1.5;
   color: white;
@@ -2493,7 +2501,7 @@ textarea.contact-popup__input:focus {
 }
 
 .services__navigation__link {
-  font-family: "Neue Montreal", sans-serif;
+  font-family: "Neue Montreal", -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, "Helvetica Neue", Arial, sans-serif;
   font-size: clamp(40px, 5vw, 60px);
   font-weight: 400;
   line-height: 1;
@@ -2940,7 +2948,7 @@ textarea.contact-popup__input:focus {
 }
 
 .faqs__left__heading {
-  font-family: "Neue Montreal", sans-serif;
+  font-family: "Neue Montreal", -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, "Helvetica Neue", Arial, sans-serif;
   font-size: clamp(40px, 5vw, 60px);
   font-weight: 400;
   line-height: 1;
@@ -3118,7 +3126,7 @@ textarea.contact-popup__input:focus {
 }
 
 .service-faqs__left__heading {
-  font-family: "Neue Montreal", sans-serif;
+  font-family: "Neue Montreal", -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, "Helvetica Neue", Arial, sans-serif;
   font-size: clamp(40px, 5vw, 60px);
   font-weight: 400;
   line-height: 1;
@@ -3269,7 +3277,7 @@ textarea.contact-popup__input:focus {
 /* === Site-wide typography (Recoleta headings + Neue Montreal body) === */
 body,
 input, select, textarea, button {
-  font-family: 'Neue Montreal', sans-serif;
+  font-family: 'Neue Montreal', -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, "Helvetica Neue", Arial, sans-serif;
   font-weight: 500;
 }
 .text-light, .text-supporting, small, .small, figcaption {
