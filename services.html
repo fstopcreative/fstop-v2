@@ -32,66 +32,7 @@
     
 <link rel="stylesheet" href="./assets/css/fancybox.css">
 <link rel="stylesheet" href="./assets/css/fancybox-custom.css">
-  <style id="kl-custom-fonts">
-@import 'https://fonts.googleapis.com/css2?family=Bebas+Neue:ital,wght@0,400&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900&display=swap';
-
-@font-face {
-        font-family: 'Nunito-Sans-Klaviyo-Hosted'; 
-        src: url(https://static.klaviyo.com/onsite/hosted-fonts/Nunito-Sans/latin/nunito-sans_latin_italic_400.woff2);
-        font-weight: 400;
-        font-style: italic;
-        font-display: swap;
-      }
-@font-face {
-        font-family: 'Nunito-Sans-Klaviyo-Hosted'; 
-        src: url(https://static.klaviyo.com/onsite/hosted-fonts/Nunito-Sans/latin/nunito-sans_latin_italic_700.woff2);
-        font-weight: 700;
-        font-style: italic;
-        font-display: swap;
-      }
-@font-face {
-        font-family: 'Nunito-Sans-Klaviyo-Hosted'; 
-        src: url(https://static.klaviyo.com/onsite/hosted-fonts/Nunito-Sans/latin/nunito-sans_latin_regular_400.woff2);
-        font-weight: 400;
-        font-style: normal;
-        font-display: swap;
-      }
-@font-face {
-        font-family: 'Nunito-Sans-Klaviyo-Hosted'; 
-        src: url(https://static.klaviyo.com/onsite/hosted-fonts/Nunito-Sans/latin/nunito-sans_latin_regular_700.woff2);
-        font-weight: 700;
-        font-style: normal;
-        font-display: swap;
-      }
-@font-face {
-        font-family: 'Poppins-Klaviyo-Hosted'; 
-        src: url(https://static.klaviyo.com/onsite/hosted-fonts/Poppins/latin/poppins_latin_italic_400.woff2);
-        font-weight: 400;
-        font-style: italic;
-        font-display: swap;
-      }
-@font-face {
-        font-family: 'Poppins-Klaviyo-Hosted'; 
-        src: url(https://static.klaviyo.com/onsite/hosted-fonts/Poppins/latin/poppins_latin_italic_700.woff2);
-        font-weight: 700;
-        font-style: italic;
-        font-display: swap;
-      }
-@font-face {
-        font-family: 'Poppins-Klaviyo-Hosted'; 
-        src: url(https://static.klaviyo.com/onsite/hosted-fonts/Poppins/latin/poppins_latin_regular_400_2.woff2);
-        font-weight: 400;
-        font-style: normal;
-        font-display: swap;
-      }
-@font-face {
-        font-family: 'Poppins-Klaviyo-Hosted'; 
-        src: url(https://static.klaviyo.com/onsite/hosted-fonts/Poppins/latin/poppins_latin_regular_700.woff2);
-        font-weight: 700;
-        font-style: normal;
-        font-display: swap;
-      }
-</style></head>
+</head>
   <body class="service-page">
     <!-- Header -->
 <div class="header-container">
@@ -854,7 +795,6 @@
   function showPopup(){
     popup.classList.add('active');
     backdrop.classList.add('active');
-    if(typeof posthog!=='undefined') posthog.capture('newsletter_popup_shown');
   }
 
   function hidePopup(){
@@ -895,7 +835,6 @@
       if(!res.ok && res.status !== 202) throw new Error('fail');
       popup.classList.add('success');
       document.cookie='charle_nl_subscribed=1;path=/;max-age='+(365*86400)+';SameSite=Lax';
-      if(typeof posthog!=='undefined') posthog.capture('newsletter_popup_subscribed',{source:'popup'});
       setTimeout(hidePopup, 4000);
     }).catch(function(){
       status.textContent = 'Something went wrong \u2014 please try again.';
@@ -3417,6 +3356,4 @@
       Fancybox.bind("[data-fancybox]", {
         // Options
       });
-    </script>
-  
-<iframe owner="archetype" title="archetype" style="display: none; visibility: hidden;" data-lf-form-tracking-inspected-p1e024bewdx7gb6d="true" data-lf-yt-playback-inspected-p1e024bewdx7gb6d="true" data-lf-vimeo-playback-inspected-p1e024bewdx7gb6d="true" src="./assets/saved_resource.html"></iframe></body></html>
+    </script></body></html>
